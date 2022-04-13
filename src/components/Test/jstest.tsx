@@ -1,784 +1,302 @@
 
 
+const data = {
 
-const data1 = {
-
-    topic: "HTML and CSS",
-    timelimit: 20,
-
-    paper:
+    title: "HTML and CSS",
+    durationInMins: 20,
+    Questions:
         [
             {
-                "Question": `In below code snippet, in what order will the margins be added?
+                "quesId":1,
+                "quesValue": `In below code snippet, in what order will the margins be added?
+                
                 p {
-                    margin: 25px 50px 75px 100px:
-                }
-                `,
-                "options": ["Top, Right, Bottom, Left", "Top, Left, Bottom, Right", "Top, Bottom, Right, Left", "Right, Left, Top, Bottom "],
-                "correct": "Top, Right, Bottom, Left"
+                    margin: 25px 50px 75px 100px;
+                  }`,
+                     
+                "quesType":"mcq-m",
+                "useCustomComponent":false,
+                "props":null,
+                "options": [
+                    {
+                        "optionId":1,
+                        "optionValue":"Top, Right, Bottom, Left",
+                        "useCustomComponent":false,
+                        "optionProps":null
+                    },
+                    {
+                        "optionId":2,
+                        "optionValue":"Top, Left, Bottom, Right",
+                        "useCustomComponent":false,
+                        "optionProps":null
+                    },
+                    {
+                        "optionId":3,
+                        "optionValue":"Top, Bottom, Right, Left",
+                        "useCustomComponent":false,
+                        "optionProps":null
+                    },
+                    {
+                        "optionId":4,
+                        "optionValue":"Right, Left, Top, Bottom",
+                        "useCustomComponent":false,
+                        "optionProps":null
+                    }
+                ],
+                "correctOption":"Top, Right, Bottom, Left"
             },
             {
-                "Question": "You are working on a form. You want to allow users to make multiple selections. Select the best control.",
-                "options": ["Radio button", "textArea", "Checkbox", "Radio or checkbox"],
-                "correct": "Checkbox"
+                "quesId":2,
+                "quesValue": "You are working on a form. You want to allow users to make multiple selections. Select the best control.",
+                "quesType":"mcq",
+                "useCustomComponent":false,
+                "props":null,
+                "options": [
+                    {   
+                        "optionId":1, 
+                        "optionValue":"Radio button"
+                    }, 
+                        {
+                            "optionId":2,
+                            "optionValue":"textArea"
+                        }, 
+                        {
+                            "optionId":3,
+                            "optionValue":"Checkbox"
+                        }, 
+                        {
+                            "optionId":4,
+                            "optionValue":"Radio or checkbox"
+                        }],
+                "correctOption": ["Checkbox"]
             },
             {
-                "Question": "How can you ensure that all necessary fields are populated before a form can be submitted?",
-                "options": ["Write a JavaScript function to evaluate all the controls on the form of content.",
-                    "On the server , evaluates all the controls for data and returns an error page for missing content.",
-                    "Add the required attribute on each control so the user gets a message that the field is required.",
-                    "Add a label to the page to let users know which controls they must fill in."],
-                "correct": "Add the required attribute on each control so the user gets a message that the field is required."
+                "quesValue": "How can you ensure that all necessary fields are populated before a form can be submitted?",
+                "quesId":3,
+                "quesType":"mcq",
+                "useCustomComponent":false,
+                "props":null,
+                "options": [
+                    { "useCustomComponent":false,"optionProps":null,"optionId":1,"optionValue":"Write a JavaScript function to evaluate all the controls on the form of content.",},
+                    {"useCustomComponent":false,"optionProps":null,"optionId":2,"optionValue":"On the server , evaluates all the controls for data and returns an error page for missing content."},
+                    {"useCustomComponent":false,"optionProps":null,"optionId":3,"optionValue":"Add the required attribute on each control so the user gets a message that the field is required."},
+                    {"useCustomComponent":false,"optionProps":null,"optionId":4,"optionValue":"Add a label to the page to let users know which controls they must fill in."}],
+                    "correctOption":["Add the required attribute on each control so the user gets a message that the field is required."]
+                },
+            { "quesId":4,
+            "quesType":"mcq",
+            "useCustomComponent":false,
+            "props":null,
+                "quesValue": "Which of the following CSS properties can be used for hiding an element in the DOM without changing the layout of the page?",
+                "options": [
+                     {"useCustomComponent":false,"optionProps":null,"optionId":1,"optionValue":"display='none'"}, 
+                     {"useCustomComponent":false,"optionProps":null,"optionId":2,"optionValue":"visibility='none'"}, 
+                     {"useCustomComponent":false,"optionProps":null,"optionId":3,"optionValue":"visibility='hidden'"}, 
+                     {"useCustomComponent":false,"optionProps":null,"optionId":4,"optionValue":"display='hidden'"}
+                ],
+                "correctOption": ["visibility='hidden'"]
             },
-            {
-                "Question": "Which of the following CSS properties can be used for hiding an element in the DOM without changing the layout of the page?",
-                "options": ["display='none'", "visibility='none'", "visibility='hidden'", "display='hidden'"],
-                "correct": "visibility='hidden'"
+            { "quesId":5,
+            "quesType":"mcq",
+            "useCustomComponent":false,
+            "props":null,
+                "quesValue": "Which of the following statements will apply a box shadow to the right and bottom edge of a div element?",
+                "options": [
+                     {"useCustomComponent":false,"optionProps":null,"optionId":1,"optionValue":"box-shadow: black 5px 5px;"},
+                     {"useCustomComponent":false,"optionProps":null,"optionId":2,"optionValue":"box-shadow: black -5px 5px;"},
+                     {"useCustomComponent":false,"optionProps":null,"optionId":3,"optionValue":"box-shadow: black 5px -5px;"},
+                     {"useCustomComponent":false,"optionProps":null,"optionId":4,"optionValue":"box-shadow: black -5px -5px;"}],
+                "correctOption": ["box-shadow: black 5px 5px;"]
             },
-            {
-                "Question": "Which of the following statements will apply a box shadow to the right and bottom edge of a div element?",
-                "options": ["box-shadow: black 5px 5px;", "box-shadow: black -5px 5px;", "box-shadow: black 5px -5px;", "box-shadow: black -5px -5px;"],
-                "correct": "box-shadow: black 5px 5px;"
+            { "quesId":6,
+            "quesType":"mcq",
+            "useCustomComponent":false,
+            "props":null,
+                "quesValue": "Which of the following CSS property for position would place an element relative to the browser window?",
+                "options": [
+                   {"useCustomComponent":false,"optionProps":null,"optionId":1,"optionValue":"Absolute"},
+                   {"useCustomComponent":false,"optionProps":null,"optionId":2,"optionValue":"Fixed"},
+                   {"useCustomComponent":false,"optionProps":null,"optionId":3,"optionValue":"Relative"},
+                   {"useCustomComponent":false,"optionProps":null,"optionId":4,"optionValue":"None of the above"}
+                ],
+                "correctOption": ["Fixed"]
             },
-            {
-                "Question": "Which of the following CSS property for position would place an element relative to the browser window?",
-                "options": ["Absolute", "Fixed", "Relative", "None of the above"],
-                "correct": "Fixed"
+            { "quesId":7,
+            "quesType":"mcq",
+            "useCustomComponent":false,
+            "props":null,
+                "quesValue": "Absolute positioning positions an object relative to what?",
+                "options": [
+                     {"useCustomComponent":false,"optionProps":null,"optionId":1,"optionValue":"The top-left corner of the browser window"},
+                     {"useCustomComponent":false,"optionProps":null,"optionId":2,"optionValue":"The top-left corner of its parent element"},
+                     {"useCustomComponent":false,"optionProps":null,"optionId":3,"optionValue":"Centered inside the window"},
+                     {"useCustomComponent":false,"optionProps":null,"optionId":4,"optionValue":"Centered inside its parent element"}],
+                "correctOption": ["The top-left corner of its parent element"]
             },
-            {
-                "Question": "Absolute positioning positions an object relative to what?",
-                "options": ["The top-left corner of the browser window",
-                    "The top-left corner of its parent element",
-                    "Centered inside the window",
-                    "Centered inside its parent element"],
-                "correct": "The top-left corner of its parent element"
+            { "quesId":8,
+            "quesType":"mcq",
+            "useCustomComponent":false,
+            "props":null,
+                "quesValue": "Which transformation enables you to change the size of an element?",
+                "options": [
+                        {"useCustomComponent":false,"optionProps":null,"optionId":1,"optionValue":"rotate"},
+                        {"useCustomComponent":false,"optionProps":null,"optionId":2,"optionValue":"skew"},
+                        {"useCustomComponent":false,"optionProps":null,"optionId":3,"optionValue":"translate"},
+                        {"useCustomComponent":false,"optionProps":null,"optionId":4,"optionValue":"scale"}],
+                "correctOption": ["scale"]
             },
-            {
-                "Question": "Which transformation enables you to change the size of an element?",
-                "options": ["rotate", "skew", "translate", "scale"],
-                "correct": "scale"
+            { "quesId":9,
+            "quesType":"mcq",
+            "useCustomComponent":false,
+            "props":null,
+                "quesValue": "You are working with the web storage api. You want to ensure that the data you stored is cleared when the user closes the browser. Where should you store it?",
+                "options": [
+                       {"useCustomComponent":false,"optionProps":null,"optionId":1,"optionValue":"LocalStorage"}, 
+                       {"useCustomComponent":false,"optionProps":null,"optionId":2,"optionValue":"cookieStorage"},
+                       {"useCustomComponent":false,"optionProps":null,"optionId":3,"optionValue":"sessionStorage"},
+                       {"useCustomComponent":false,"optionProps":null,"optionId":4,"optionValue":"A hidden input element"}],
+                "correctOption": ["sessionStorage"]
             },
-            {
-                "Question": "You are working with the web storage api. You want to ensure that the data you stored is cleared when the user closes the browser. Where should you store it?",
-                "options": ["LocalStorage", "cookieStorage", "sessionStorage", "A hidden input element"],
-                "correct": "sessionStorage"
+            { "quesId":10,
+            "quesType":"mcq",
+            "useCustomComponent":false,
+            "props":null,
+                "quesValue": "You are working on a web page . you are looking from the outside edge of an element and moving to the inside edge. Select the right order that the padding, margin, and border occur in?",
+                "options": [
+                     {"useCustomComponent":false,"optionProps":null,"optionId":1,"optionValue":"padding, border, margin"},
+                     {"useCustomComponent":false,"optionProps":null,"optionId":2,"optionValue":"margin, border, padding"},
+                     {"useCustomComponent":false,"optionProps":null,"optionId":3,"optionValue":"border, padding, margin"},
+                     {"useCustomComponent":false,"optionProps":null,"optionId":4,"optionValue":"margin, padding, border"}],
+                "correctOption": ["margin, border, padding"]
             },
-            {
-                "Question": "You are working on a web page . you are looking from the outside edge of an element and moving to the inside edge. Select the right order that the padding, margin, and border occur in?",
-                "options": ["padding, border, margin",
-                    "margin, border, padding",
-                    "border, padding, margin",
-                    "margin, padding, border"],
-                "correct": "margin, border, padding"
+            { "quesId":11,
+            "quesType":"mcq",
+            "useCustomComponent":false,
+            "props":null,
+                "quesValue": "Which of the following is the way to configure the amount of space between words?",
+                "options": [
+                        {"useCustomComponent":false,"optionProps":null,"optionId":1,"optionValue":"word-margin"},
+                        {"useCustomComponent":false,"optionProps":null,"optionId":2,"optionValue":"letter-margin"},
+                        {"useCustomComponent":false,"optionProps":null,"optionId":3,"optionValue":"word-spacing"},
+                        {"useCustomComponent":false,"optionProps":null,"optionId":4,"optionValue":"word-padding"}],
+                "correctOption": ["word-spacing"]
             },
-            {
-                "Question": "Which of the following is the way to configure the amount of space between words?",
-                "options": ["word-margin", "letter-margin", "word-spacing", "word-padding"],
-                "correct": "word-spacing"
+            { "quesId":12,
+            "quesType":"mcq",
+            "useCustomComponent":false,
+            "props":null,
+                "quesValue": "How can you create a semi-transparent background color?",
+                "options": [
+
+                     {"useCustomComponent":false,"optionProps":null,"optionId":1,"optionValue":"background-color: rgba(0,0,0,0.5);"},
+                     {"useCustomComponent":false,"optionProps":null,"optionId":2,"optionValue":"background-color: rgbx(0,0,0,0.5);"},
+                     {"useCustomComponent":false,"optionProps":null,"optionId":3,"optionValue":"background-color: hsl(0,0,0,0.5);"},
+                     {"useCustomComponent":false,"optionProps":null,"optionId":4,"optionValue":"background-color: rgba(0,0,0,1);"}
+                ],
+                "correctOption": ["background-color: rgba(0,0,0,0.5);"]
             },
-            {
-                "Question": "How can you create a semi-transparent background color?",
-                "options": ["background-color: rgba(0,0,0,0.5);",
-                 "background-color: rgbx(0,0,0,0.5);",
-                  "background-color: hsl(0,0,0,0.5);",
-                   "background-color: rgba(0,0,0,1);"],
-                "correct": "background-color: rgba(0,0,0,0.5);"
+            { "quesId":13,
+            "quesType":"mcq",
+            "useCustomComponent":false,
+            "props":null,
+                "quesValue": "Which property is used to adjust the space between text characters?",
+                "options": [
+                     {"useCustomComponent":false,"optionProps":null,"optionId":1,"optionValue":"Text-transform"},
+                     {"useCustomComponent":false,"optionProps":null,"optionId":2,"optionValue":"font-variant"},
+                     {"useCustomComponent":false,"optionProps":null,"optionId":3,"optionValue":"font-style"},
+                     {"useCustomComponent":false,"optionProps":null,"optionId":4,"optionValue":"letter-spacing"}
+                    ],
+                "correctOption": "letter-spacing"
             },
-            {
-                "Question": "Which property is used to adjust the space between text characters?",
-                "options": ["Text-transform", "font-variant", "font-style", "letter-spacing"],
-                "correct": "letter-spacing"
+            { "quesId":14,
+            "quesType":"mcq",
+            "useCustomComponent":false,
+            "props":null,
+                "quesValue": "What are the uses of CSS pseudo-elements?",
+                "options": [
+                     {"useCustomComponent":false,"optionProps":null,"optionId":1,"optionValue":"Style specified parts of an element."},
+                     {"useCustomComponent":false,"optionProps":null,"optionId":2,"optionValue":"Style the first letter or line of an element."}, 
+                     {"useCustomComponent":false,"optionProps":null,"optionId":3,"optionValue":"insert content before or after the element."},
+                     {"useCustomComponent":false,"optionProps":null,"optionId":4,"optionValue":"All of the above."}
+                ],
+                "correctOption": ["All of the above."]
             },
-            {
-                "Question": "What are the uses of CSS pseudo-elements?",
-                "options": ["Style specified parts of an element.",
-                 "Style the first letter or line of an element.", 
-                 "insert content before or after the element.",
-                  "All of the above."],
-                "correct": "All of the above."
+            { "quesId":15,
+            "quesType":"mcq",
+            "useCustomComponent":false,
+            "props":null,
+                "quesValue": "Which of the following CSS properties specifies the stack order of elements?",
+                "options": [
+                        {"useCustomComponent":false,"optionProps":null,"optionId":1,"optionValue":"z-index"},
+                        {"useCustomComponent":false,"optionProps":null,"optionId":2,"optionValue":"overlap"},
+                        {"useCustomComponent":false,"optionProps":null,"optionId":3,"optionValue":"No such specific property is present"},
+                        {"useCustomComponent":false,"optionProps":null,"optionId":4,"optionValue":"None of the above"}
+                    ],
+                "correctOption": ["z-index"]
             },
-            {
-                "Question": "Which of the following CSS properties specifies the stack order of elements?",
-                "options": ["z-index", "overlap", "No such specific property is present", "None of the above"],
-                "correct": "z-index"
+            { "quesId":16,
+            "quesType":"mcq",
+            "useCustomComponent":false,
+            "props":null,
+                "quesValue": "The CSS property used to specify the transparency of an element is?",
+                "options": [
+                     {"useCustomComponent":false,"optionProps":null,"optionId":1,"optionValue":"opacity"}, 
+                     {"useCustomComponent":false,"optionProps":null,"optionId":2,"optionValue":"visibility"}, 
+                     {"useCustomComponent":false,"optionProps":null,"optionId":3,"optionValue":"filter"},
+                     {"useCustomComponent":false,"optionProps":null,"optionId":4,"optionValue":"None of the above"}],
+                "correctOption": ["opacity"]
             },
-            {
-                "Question": "The CSS property used to specify the transparency of an element is?",
-                "options": ["opacity", "visibility", "filter", "None of the above"],
-                "correct": "opacity"
+            { "quesId":17,
+            "quesType":"mcq",
+            "useCustomComponent":false,
+            "props":null,
+                "quesValue": "Can negative values be allowed in padding property?",
+                "options": [
+                     {"useCustomComponent":false,"optionProps":null,"optionId":1,"optionValue":"Yes"}, 
+                     {"useCustomComponent":false,"optionProps":null,"optionId":2,"optionValue":"No"}, 
+                     {"useCustomComponent":false,"optionProps":null,"optionId":3,"optionValue":"Depends on property"}, 
+                     {"useCustomComponent":false,"optionProps":null,"optionId":4,"optionValue":"None of the above"}],
+                "correctOption": ["No"]
             },
-            {
-                "Question": "Can negative values be allowed in padding property?",
-                "options": ["Yes", "No", "Depends on property", "None of the above"],
-                "correct": "No"
+            { "quesId":18,
+            "quesType":"mcq",
+            "useCustomComponent":false,
+            "props":null,
+                "quesValue": "Which of the following colors contain equal amount of RGB?",
+                "options": [
+                     {"useCustomComponent":false,"optionProps":null,"optionId":1,"optionValue":"White"}, 
+                     {"useCustomComponent":false,"optionProps":null,"optionId":2,"optionValue":"Gray"}, 
+                     {"useCustomComponent":false,"optionProps":null,"optionId":3,"optionValue":"Black"}, 
+                     {"useCustomComponent":false,"optionProps":null,"optionId":4,"optionValue":"All of the above"}
+                ],
+                "correctOption": ["All of the above"]
             },
-            {
-                "Question": "Which of the following colors contain equal amount of RGB?",
-                "options": ["White", "Gray", "Black", "All of the above"],
-                "correct": "All of the above"
+            { "quesId":19,
+            "quesType":"mcq",
+            "useCustomComponent":false,
+            "props":null,
+                "quesValue": "What is the speciality about the <small> and <big> tags in HTML",
+                "options": [
+                        {"useCustomComponent":false,"optionProps":null,"optionId":1,"optionValue":"They work on anything"},
+                        {"useCustomComponent":false,"optionProps":null,"optionId":2,"optionValue":"They can be used for text only"},
+                        {"useCustomComponent":false,"optionProps":null,"optionId":3,"optionValue":"They can be repeated"},
+                        {"useCustomComponent":false,"optionProps":null,"optionId":4,"optionValue":"None of the above"}],
+                "correctOption": ["They can be repeated"]
             },
-            {
-                "Question": "What is the speciality about the <small> and <big> tags in HTML",
-                "options": ["They work on anything", "They can be used for text only", "They can be repeated", "None of the above"],
-                "correct": "They can be repeated"
-            },
-            {
-                "Question": "What is the correct order to effectively apply CSS.",
-                "options": ["a:link, a:visited, a:hover, a:acitive", "a:acitive, a:hover, a:link, a:visited", "a:hover, a:visited, a:link, a:acitive", "a:visited, a:link, a:active, a:hover"],
-                "correct": "a:link, a:visited, a:hover, a:acitive"
+            { "quesId":20,
+            "quesType":"mcq",
+            "useCustomComponent":false,
+            "props":null,
+                "quesValue": "What is the correct order to effectively apply CSS.",
+                "options": [
+                       {"useCustomComponent":false,"optionProps":null,"optionId":1,"optionValue":"a:link, a:visited, a:hover, a:acitive"},
+                       {"useCustomComponent":false,"optionProps":null,"optionId":2,"optionValue":"a:acitive, a:hover, a:link, a:visited"},
+                       {"useCustomComponent":false,"optionProps":null,"optionId":3,"optionValue":"a:hover, a:visited, a:link, a:acitive"},
+                       {"useCustomComponent":false,"optionProps":null,"optionId":4,"optionValue":"a:visited, a:link, a:active, a:hover"}],
+                "correctOption": ["a:link, a:visited, a:hover, a:acitive"]
             }
 
         ]
 }
 
-const data2 = {
-
-    topic: "JavaScript",
-    timelimit: 20,
-
-    paper:
-        [
-            {
-                "Question": `In below code snippet, in what order will the margins be added?
-                p {
-                    margin: 25px 50px 75px 100px:
-                }
-                `,
-                "options": ["Top, Right, Bottom, Left", "Top, Left, Bottom, Right", "Top, Bottom, Right, Left", "Right, Left, Top, Bottom "],
-                "correct": "Top, Right, Bottom, Left"
-            },
-            {
-                "Question": "You are working on a form. You want to allow users to make multiple selections. Select the best control.",
-                "options": ["Radio button", "textArea", "Checkbox", "Radio or checkbox"],
-                "correct": "Checkbox"
-            },
-            {
-                "Question": "How can you ensure that all necessary fields are populated before a form can be submitted?",
-                "options": ["Write a JavaScript function to evaluate all the controls on the form of content.",
-                    "On the server , evaluates all the controls for data and returns an error page for missing content.",
-                    "Add the required attribute on each control so the user gets a message that the field is required.",
-                    "Add a label to the page to let users know which controls they must fill in."],
-                "correct": "Add the required attribute on each control so the user gets a message that the field is required."
-            },
-            {
-                "Question": "Which of the following CSS properties can be used for hiding an element in the DOM without changing the layout of the page?",
-                "options": ["display='none'", "visibility='none'", "visibility='hidden'", "display='hidden'"],
-                "correct": "visibility='hidden'"
-            },
-            {
-                "Question": "Which of the following statements will apply a box shadow to the right and bottom edge of a div element?",
-                "options": ["box-shadow: black 5px 5px;", "box-shadow: black -5px 5px;", "box-shadow: black 5px -5px;", "box-shadow: black -5px -5px;"],
-                "correct": "box-shadow: black 5px 5px;"
-            },
-            {
-                "Question": "Which of the following CSS property for position would place an element relative to the browser window?",
-                "options": ["Absolute", "Fixed", "Relative", "None of the above"],
-                "correct": "Fixed"
-            },
-            {
-                "Question": "Absolute positioning positions an object relative to what?",
-                "options": ["The top-left corner of the browser window",
-                    "The top-left corner of its parent element",
-                    "Centered inside the window",
-                    "Centered inside its parent element"],
-                "correct": "The top-left corner of its parent element"
-            },
-            {
-                "Question": "Which transformation enables you to change the size of an element?",
-                "options": ["rotate", "skew", "translate", "scale"],
-                "correct": "scale"
-            },
-            {
-                "Question": "You are working with the web storage api. You want to ensure that the data you stored is cleared when the user closes the browser. Where should you store it?",
-                "options": ["LocalStorage", "cookieStorage", "sessionStorage", "A hidden input element"],
-                "correct": "sessionStorage"
-            },
-            {
-                "Question": "You are working on a web page . you are looking from the outside edge of an element and moving to the inside edge. Select the right order that the padding, margin, and border occur in?",
-                "options": ["padding, border, margin",
-                    "margin, border, padding",
-                    "border, padding, margin",
-                    "margin, padding, border"],
-                "correct": "margin, border, padding"
-            },
-            {
-                "Question": "Which of the following is the way to configure the amount of space between words?",
-                "options": ["word-margin", "letter-margin", "word-spacing", "word-padding"],
-                "correct": "word-spacing"
-            },
-            {
-                "Question": "How can you create a semi-transparent background color?",
-                "options": ["background-color: rgba(0,0,0,0.5);",
-                 "background-color: rgbx(0,0,0,0.5);",
-                  "background-color: hsl(0,0,0,0.5);",
-                   "background-color: rgba(0,0,0,1);"],
-                "correct": "background-color: rgba(0,0,0,0.5);"
-            },
-            {
-                "Question": "Which property is used to adjust the space between text characters?",
-                "options": ["Text-transform", "font-variant", "font-style", "letter-spacing"],
-                "correct": "letter-spacing"
-            },
-            {
-                "Question": "What are the uses of CSS pseudo-elements?",
-                "options": ["Style specified parts of an element.",
-                 "Style the first letter or line of an element.", 
-                 "insert content before or after the element.",
-                  "All of the above."],
-                "correct": "All of the above."
-            },
-            {
-                "Question": "Which of the following CSS properties specifies the stack order of elements?",
-                "options": ["z-index", "overlap", "No such specific property is present", "None of the above"],
-                "correct": "z-index"
-            },
-            {
-                "Question": "The CSS property used to specify the transparency of an element is?",
-                "options": ["opacity", "visibility", "filter", "None of the above"],
-                "correct": "opacity"
-            },
-            {
-                "Question": "Can negative values be allowed in padding property?",
-                "options": ["Yes", "No", "Depends on property", "None of the above"],
-                "correct": "No"
-            },
-            {
-                "Question": "Which of the following colors contain equal amount of RGB?",
-                "options": ["White", "Gray", "Black", "All of the above"],
-                "correct": "All of the above"
-            },
-            {
-                "Question": "What is the speciality about the <small> and <big> tags in HTML",
-                "options": ["They work on anything", "They can be used for text only", "They can be repeated", "None of the above"],
-                "correct": "They can be repeated"
-            },
-            {
-                "Question": "What is the correct order to effectively apply CSS.",
-                "options": ["a:link, a:visited, a:hover, a:acitive", "a:acitive, a:hover, a:link, a:visited", "a:hover, a:visited, a:link, a:acitive", "a:visited, a:link, a:active, a:hover"],
-                "correct": "a:link, a:visited, a:hover, a:acitive"
-            }
-
-        ]
-}
-
-const data3 = {
-
-    topic: "TypeScript",
-    timelimit: 20,
-
-    paper:
-        [
-            {
-                "Question": `In below code snippet, in what order will the margins be added?
-                p {
-                    margin: 25px 50px 75px 100px:
-                }
-                `,
-                "options": ["Top, Right, Bottom, Left", "Top, Left, Bottom, Right", "Top, Bottom, Right, Left", "Right, Left, Top, Bottom "],
-                "correct": "Top, Right, Bottom, Left"
-            },
-            {
-                "Question": "You are working on a form. You want to allow users to make multiple selections. Select the best control.",
-                "options": ["Radio button", "textArea", "Checkbox", "Radio or checkbox"],
-                "correct": "Checkbox"
-            },
-            {
-                "Question": "How can you ensure that all necessary fields are populated before a form can be submitted?",
-                "options": ["Write a JavaScript function to evaluate all the controls on the form of content.",
-                    "On the server , evaluates all the controls for data and returns an error page for missing content.",
-                    "Add the required attribute on each control so the user gets a message that the field is required.",
-                    "Add a label to the page to let users know which controls they must fill in."],
-                "correct": "Add the required attribute on each control so the user gets a message that the field is required."
-            },
-            {
-                "Question": "Which of the following CSS properties can be used for hiding an element in the DOM without changing the layout of the page?",
-                "options": ["display='none'", "visibility='none'", "visibility='hidden'", "display='hidden'"],
-                "correct": "visibility='hidden'"
-            },
-            {
-                "Question": "Which of the following statements will apply a box shadow to the right and bottom edge of a div element?",
-                "options": ["box-shadow: black 5px 5px;", "box-shadow: black -5px 5px;", "box-shadow: black 5px -5px;", "box-shadow: black -5px -5px;"],
-                "correct": "box-shadow: black 5px 5px;"
-            },
-            {
-                "Question": "Which of the following CSS property for position would place an element relative to the browser window?",
-                "options": ["Absolute", "Fixed", "Relative", "None of the above"],
-                "correct": "Fixed"
-            },
-            {
-                "Question": "Absolute positioning positions an object relative to what?",
-                "options": ["The top-left corner of the browser window",
-                    "The top-left corner of its parent element",
-                    "Centered inside the window",
-                    "Centered inside its parent element"],
-                "correct": "The top-left corner of its parent element"
-            },
-            {
-                "Question": "Which transformation enables you to change the size of an element?",
-                "options": ["rotate", "skew", "translate", "scale"],
-                "correct": "scale"
-            },
-            {
-                "Question": "You are working with the web storage api. You want to ensure that the data you stored is cleared when the user closes the browser. Where should you store it?",
-                "options": ["LocalStorage", "cookieStorage", "sessionStorage", "A hidden input element"],
-                "correct": "sessionStorage"
-            },
-            {
-                "Question": "You are working on a web page . you are looking from the outside edge of an element and moving to the inside edge. Select the right order that the padding, margin, and border occur in?",
-                "options": ["padding, border, margin",
-                    "margin, border, padding",
-                    "border, padding, margin",
-                    "margin, padding, border"],
-                "correct": "margin, border, padding"
-            },
-            {
-                "Question": "Which of the following is the way to configure the amount of space between words?",
-                "options": ["word-margin", "letter-margin", "word-spacing", "word-padding"],
-                "correct": "word-spacing"
-            },
-            {
-                "Question": "How can you create a semi-transparent background color?",
-                "options": ["background-color: rgba(0,0,0,0.5);",
-                 "background-color: rgbx(0,0,0,0.5);",
-                  "background-color: hsl(0,0,0,0.5);",
-                   "background-color: rgba(0,0,0,1);"],
-                "correct": "background-color: rgba(0,0,0,0.5);"
-            },
-            {
-                "Question": "Which property is used to adjust the space between text characters?",
-                "options": ["Text-transform", "font-variant", "font-style", "letter-spacing"],
-                "correct": "letter-spacing"
-            },
-            {
-                "Question": "What are the uses of CSS pseudo-elements?",
-                "options": ["Style specified parts of an element.",
-                 "Style the first letter or line of an element.", 
-                 "insert content before or after the element.",
-                  "All of the above."],
-                "correct": "All of the above."
-            },
-            {
-                "Question": "Which of the following CSS properties specifies the stack order of elements?",
-                "options": ["z-index", "overlap", "No such specific property is present", "None of the above"],
-                "correct": "z-index"
-            },
-            {
-                "Question": "The CSS property used to specify the transparency of an element is?",
-                "options": ["opacity", "visibility", "filter", "None of the above"],
-                "correct": "opacity"
-            },
-            {
-                "Question": "Can negative values be allowed in padding property?",
-                "options": ["Yes", "No", "Depends on property", "None of the above"],
-                "correct": "No"
-            },
-            {
-                "Question": "Which of the following colors contain equal amount of RGB?",
-                "options": ["White", "Gray", "Black", "All of the above"],
-                "correct": "All of the above"
-            },
-            {
-                "Question": "What is the speciality about the <small> and <big> tags in HTML",
-                "options": ["They work on anything", "They can be used for text only", "They can be repeated", "None of the above"],
-                "correct": "They can be repeated"
-            },
-            {
-                "Question": "What is the correct order to effectively apply CSS.",
-                "options": ["a:link, a:visited, a:hover, a:acitive", "a:acitive, a:hover, a:link, a:visited", "a:hover, a:visited, a:link, a:acitive", "a:visited, a:link, a:active, a:hover"],
-                "correct": "a:link, a:visited, a:hover, a:acitive"
-            }
-
-        ]
-}
-
-const data4 = {
-
-    topic: "Node JS",
-    timelimit: 20,
-
-    paper:
-        [
-            {
-                "Question": `In below code snippet, in what order will the margins be added?
-                p {
-                    margin: 25px 50px 75px 100px:
-                }
-                `,
-                "options": ["Top, Right, Bottom, Left", "Top, Left, Bottom, Right", "Top, Bottom, Right, Left", "Right, Left, Top, Bottom "],
-                "correct": "Top, Right, Bottom, Left"
-            },
-            {
-                "Question": "You are working on a form. You want to allow users to make multiple selections. Select the best control.",
-                "options": ["Radio button", "textArea", "Checkbox", "Radio or checkbox"],
-                "correct": "Checkbox"
-            },
-            {
-                "Question": "How can you ensure that all necessary fields are populated before a form can be submitted?",
-                "options": ["Write a JavaScript function to evaluate all the controls on the form of content.",
-                    "On the server , evaluates all the controls for data and returns an error page for missing content.",
-                    "Add the required attribute on each control so the user gets a message that the field is required.",
-                    "Add a label to the page to let users know which controls they must fill in."],
-                "correct": "Add the required attribute on each control so the user gets a message that the field is required."
-            },
-            {
-                "Question": "Which of the following CSS properties can be used for hiding an element in the DOM without changing the layout of the page?",
-                "options": ["display='none'", "visibility='none'", "visibility='hidden'", "display='hidden'"],
-                "correct": "visibility='hidden'"
-            },
-            {
-                "Question": "Which of the following statements will apply a box shadow to the right and bottom edge of a div element?",
-                "options": ["box-shadow: black 5px 5px;", "box-shadow: black -5px 5px;", "box-shadow: black 5px -5px;", "box-shadow: black -5px -5px;"],
-                "correct": "box-shadow: black 5px 5px;"
-            },
-            {
-                "Question": "Which of the following CSS property for position would place an element relative to the browser window?",
-                "options": ["Absolute", "Fixed", "Relative", "None of the above"],
-                "correct": "Fixed"
-            },
-            {
-                "Question": "Absolute positioning positions an object relative to what?",
-                "options": ["The top-left corner of the browser window",
-                    "The top-left corner of its parent element",
-                    "Centered inside the window",
-                    "Centered inside its parent element"],
-                "correct": "The top-left corner of its parent element"
-            },
-            {
-                "Question": "Which transformation enables you to change the size of an element?",
-                "options": ["rotate", "skew", "translate", "scale"],
-                "correct": "scale"
-            },
-            {
-                "Question": "You are working with the web storage api. You want to ensure that the data you stored is cleared when the user closes the browser. Where should you store it?",
-                "options": ["LocalStorage", "cookieStorage", "sessionStorage", "A hidden input element"],
-                "correct": "sessionStorage"
-            },
-            {
-                "Question": "You are working on a web page . you are looking from the outside edge of an element and moving to the inside edge. Select the right order that the padding, margin, and border occur in?",
-                "options": ["padding, border, margin",
-                    "margin, border, padding",
-                    "border, padding, margin",
-                    "margin, padding, border"],
-                "correct": "margin, border, padding"
-            },
-            {
-                "Question": "Which of the following is the way to configure the amount of space between words?",
-                "options": ["word-margin", "letter-margin", "word-spacing", "word-padding"],
-                "correct": "word-spacing"
-            },
-            {
-                "Question": "How can you create a semi-transparent background color?",
-                "options": ["background-color: rgba(0,0,0,0.5);",
-                 "background-color: rgbx(0,0,0,0.5);",
-                  "background-color: hsl(0,0,0,0.5);",
-                   "background-color: rgba(0,0,0,1);"],
-                "correct": "background-color: rgba(0,0,0,0.5);"
-            },
-            {
-                "Question": "Which property is used to adjust the space between text characters?",
-                "options": ["Text-transform", "font-variant", "font-style", "letter-spacing"],
-                "correct": "letter-spacing"
-            },
-            {
-                "Question": "What are the uses of CSS pseudo-elements?",
-                "options": ["Style specified parts of an element.",
-                 "Style the first letter or line of an element.", 
-                 "insert content before or after the element.",
-                  "All of the above."],
-                "correct": "All of the above."
-            },
-            {
-                "Question": "Which of the following CSS properties specifies the stack order of elements?",
-                "options": ["z-index", "overlap", "No such specific property is present", "None of the above"],
-                "correct": "z-index"
-            },
-            {
-                "Question": "The CSS property used to specify the transparency of an element is?",
-                "options": ["opacity", "visibility", "filter", "None of the above"],
-                "correct": "opacity"
-            },
-            {
-                "Question": "Can negative values be allowed in padding property?",
-                "options": ["Yes", "No", "Depends on property", "None of the above"],
-                "correct": "No"
-            },
-            {
-                "Question": "Which of the following colors contain equal amount of RGB?",
-                "options": ["White", "Gray", "Black", "All of the above"],
-                "correct": "All of the above"
-            },
-            {
-                "Question": "What is the speciality about the <small> and <big> tags in HTML",
-                "options": ["They work on anything", "They can be used for text only", "They can be repeated", "None of the above"],
-                "correct": "They can be repeated"
-            },
-            {
-                "Question": "What is the correct order to effectively apply CSS.",
-                "options": ["a:link, a:visited, a:hover, a:acitive", "a:acitive, a:hover, a:link, a:visited", "a:hover, a:visited, a:link, a:acitive", "a:visited, a:link, a:active, a:hover"],
-                "correct": "a:link, a:visited, a:hover, a:acitive"
-            }
-
-        ]
-}
-
-const data5 = {
-
-    topic: "React JS",
-    timelimit: 20,
-
-    paper:
-        [
-            {
-                "Question": `In below code snippet, in what order will the margins be added?
-                p {
-                    margin: 25px 50px 75px 100px:
-                }
-                `,
-                "options": ["Top, Right, Bottom, Left", "Top, Left, Bottom, Right", "Top, Bottom, Right, Left", "Right, Left, Top, Bottom "],
-                "correct": "Top, Right, Bottom, Left"
-            },
-            {
-                "Question": "You are working on a form. You want to allow users to make multiple selections. Select the best control.",
-                "options": ["Radio button", "textArea", "Checkbox", "Radio or checkbox"],
-                "correct": "Checkbox"
-            },
-            {
-                "Question": "How can you ensure that all necessary fields are populated before a form can be submitted?",
-                "options": ["Write a JavaScript function to evaluate all the controls on the form of content.",
-                    "On the server , evaluates all the controls for data and returns an error page for missing content.",
-                    "Add the required attribute on each control so the user gets a message that the field is required.",
-                    "Add a label to the page to let users know which controls they must fill in."],
-                "correct": "Add the required attribute on each control so the user gets a message that the field is required."
-            },
-            {
-                "Question": "Which of the following CSS properties can be used for hiding an element in the DOM without changing the layout of the page?",
-                "options": ["display='none'", "visibility='none'", "visibility='hidden'", "display='hidden'"],
-                "correct": "visibility='hidden'"
-            },
-            {
-                "Question": "Which of the following statements will apply a box shadow to the right and bottom edge of a div element?",
-                "options": ["box-shadow: black 5px 5px;", "box-shadow: black -5px 5px;", "box-shadow: black 5px -5px;", "box-shadow: black -5px -5px;"],
-                "correct": "box-shadow: black 5px 5px;"
-            },
-            {
-                "Question": "Which of the following CSS property for position would place an element relative to the browser window?",
-                "options": ["Absolute", "Fixed", "Relative", "None of the above"],
-                "correct": "Fixed"
-            },
-            {
-                "Question": "Absolute positioning positions an object relative to what?",
-                "options": ["The top-left corner of the browser window",
-                    "The top-left corner of its parent element",
-                    "Centered inside the window",
-                    "Centered inside its parent element"],
-                "correct": "The top-left corner of its parent element"
-            },
-            {
-                "Question": "Which transformation enables you to change the size of an element?",
-                "options": ["rotate", "skew", "translate", "scale"],
-                "correct": "scale"
-            },
-            {
-                "Question": "You are working with the web storage api. You want to ensure that the data you stored is cleared when the user closes the browser. Where should you store it?",
-                "options": ["LocalStorage", "cookieStorage", "sessionStorage", "A hidden input element"],
-                "correct": "sessionStorage"
-            },
-            {
-                "Question": "You are working on a web page . you are looking from the outside edge of an element and moving to the inside edge. Select the right order that the padding, margin, and border occur in?",
-                "options": ["padding, border, margin",
-                    "margin, border, padding",
-                    "border, padding, margin",
-                    "margin, padding, border"],
-                "correct": "margin, border, padding"
-            },
-            {
-                "Question": "Which of the following is the way to configure the amount of space between words?",
-                "options": ["word-margin", "letter-margin", "word-spacing", "word-padding"],
-                "correct": "word-spacing"
-            },
-            {
-                "Question": "How can you create a semi-transparent background color?",
-                "options": ["background-color: rgba(0,0,0,0.5);",
-                 "background-color: rgbx(0,0,0,0.5);",
-                  "background-color: hsl(0,0,0,0.5);",
-                   "background-color: rgba(0,0,0,1);"],
-                "correct": "background-color: rgba(0,0,0,0.5);"
-            },
-            {
-                "Question": "Which property is used to adjust the space between text characters?",
-                "options": ["Text-transform", "font-variant", "font-style", "letter-spacing"],
-                "correct": "letter-spacing"
-            },
-            {
-                "Question": "What are the uses of CSS pseudo-elements?",
-                "options": ["Style specified parts of an element.",
-                 "Style the first letter or line of an element.", 
-                 "insert content before or after the element.",
-                  "All of the above."],
-                "correct": "All of the above."
-            },
-            {
-                "Question": "Which of the following CSS properties specifies the stack order of elements?",
-                "options": ["z-index", "overlap", "No such specific property is present", "None of the above"],
-                "correct": "z-index"
-            },
-            {
-                "Question": "The CSS property used to specify the transparency of an element is?",
-                "options": ["opacity", "visibility", "filter", "None of the above"],
-                "correct": "opacity"
-            },
-            {
-                "Question": "Can negative values be allowed in padding property?",
-                "options": ["Yes", "No", "Depends on property", "None of the above"],
-                "correct": "No"
-            },
-            {
-                "Question": "Which of the following colors contain equal amount of RGB?",
-                "options": ["White", "Gray", "Black", "All of the above"],
-                "correct": "All of the above"
-            },
-            {
-                "Question": "What is the speciality about the <small> and <big> tags in HTML",
-                "options": ["They work on anything", "They can be used for text only", "They can be repeated", "None of the above"],
-                "correct": "They can be repeated"
-            },
-            {
-                "Question": "What is the correct order to effectively apply CSS.",
-                "options": ["a:link, a:visited, a:hover, a:acitive", "a:acitive, a:hover, a:link, a:visited", "a:hover, a:visited, a:link, a:acitive", "a:visited, a:link, a:active, a:hover"],
-                "correct": "a:link, a:visited, a:hover, a:acitive"
-            }
-
-        ]
-}
-
-const data6 = {
-
-    topic: "Git ",
-    timelimit: 20,
-
-    paper:
-        [
-            {
-                "Question": `In below code snippet, in what order will the margins be added?
-                p {
-                    margin: 25px 50px 75px 100px:
-                }
-                `,
-                "options": ["Top, Right, Bottom, Left", "Top, Left, Bottom, Right", "Top, Bottom, Right, Left", "Right, Left, Top, Bottom "],
-                "correct": "Top, Right, Bottom, Left"
-            },
-            {
-                "Question": "You are working on a form. You want to allow users to make multiple selections. Select the best control.",
-                "options": ["Radio button", "textArea", "Checkbox", "Radio or checkbox"],
-                "correct": "Checkbox"
-            },
-            {
-                "Question": "How can you ensure that all necessary fields are populated before a form can be submitted?",
-                "options": ["Write a JavaScript function to evaluate all the controls on the form of content.",
-                    "On the server , evaluates all the controls for data and returns an error page for missing content.",
-                    "Add the required attribute on each control so the user gets a message that the field is required.",
-                    "Add a label to the page to let users know which controls they must fill in."],
-                "correct": "Add the required attribute on each control so the user gets a message that the field is required."
-            },
-            {
-                "Question": "Which of the following CSS properties can be used for hiding an element in the DOM without changing the layout of the page?",
-                "options": ["display='none'", "visibility='none'", "visibility='hidden'", "display='hidden'"],
-                "correct": "visibility='hidden'"
-            },
-            {
-                "Question": "Which of the following statements will apply a box shadow to the right and bottom edge of a div element?",
-                "options": ["box-shadow: black 5px 5px;", "box-shadow: black -5px 5px;", "box-shadow: black 5px -5px;", "box-shadow: black -5px -5px;"],
-                "correct": "box-shadow: black 5px 5px;"
-            },
-            {
-                "Question": "Which of the following CSS property for position would place an element relative to the browser window?",
-                "options": ["Absolute", "Fixed", "Relative", "None of the above"],
-                "correct": "Fixed"
-            },
-            {
-                "Question": "Absolute positioning positions an object relative to what?",
-                "options": ["The top-left corner of the browser window",
-                    "The top-left corner of its parent element",
-                    "Centered inside the window",
-                    "Centered inside its parent element"],
-                "correct": "The top-left corner of its parent element"
-            },
-            {
-                "Question": "Which transformation enables you to change the size of an element?",
-                "options": ["rotate", "skew", "translate", "scale"],
-                "correct": "scale"
-            },
-            {
-                "Question": "You are working with the web storage api. You want to ensure that the data you stored is cleared when the user closes the browser. Where should you store it?",
-                "options": ["LocalStorage", "cookieStorage", "sessionStorage", "A hidden input element"],
-                "correct": "sessionStorage"
-            },
-            {
-                "Question": "You are working on a web page . you are looking from the outside edge of an element and moving to the inside edge. Select the right order that the padding, margin, and border occur in?",
-                "options": ["padding, border, margin",
-                    "margin, border, padding",
-                    "border, padding, margin",
-                    "margin, padding, border"],
-                "correct": "margin, border, padding"
-            },
-            {
-                "Question": "Which of the following is the way to configure the amount of space between words?",
-                "options": ["word-margin", "letter-margin", "word-spacing", "word-padding"],
-                "correct": "word-spacing"
-            },
-            {
-                "Question": "How can you create a semi-transparent background color?",
-                "options": ["background-color: rgba(0,0,0,0.5);",
-                 "background-color: rgbx(0,0,0,0.5);",
-                  "background-color: hsl(0,0,0,0.5);",
-                   "background-color: rgba(0,0,0,1);"],
-                "correct": "background-color: rgba(0,0,0,0.5);"
-            },
-            {
-                "Question": "Which property is used to adjust the space between text characters?",
-                "options": ["Text-transform", "font-variant", "font-style", "letter-spacing"],
-                "correct": "letter-spacing"
-            },
-            {
-                "Question": "What are the uses of CSS pseudo-elements?",
-                "options": ["Style specified parts of an element.",
-                 "Style the first letter or line of an element.", 
-                 "insert content before or after the element.",
-                  "All of the above."],
-                "correct": "All of the above."
-            },
-            {
-                "Question": "Which of the following CSS properties specifies the stack order of elements?",
-                "options": ["z-index", "overlap", "No such specific property is present", "None of the above"],
-                "correct": "z-index"
-            },
-            {
-                "Question": "The CSS property used to specify the transparency of an element is?",
-                "options": ["opacity", "visibility", "filter", "None of the above"],
-                "correct": "opacity"
-            },
-            {
-                "Question": "Can negative values be allowed in padding property?",
-                "options": ["Yes", "No", "Depends on property", "None of the above"],
-                "correct": "No"
-            },
-            {
-                "Question": "Which of the following colors contain equal amount of RGB?",
-                "options": ["White", "Gray", "Black", "All of the above"],
-                "correct": "All of the above"
-            },
-            {
-                "Question": "What is the speciality about the <small> and <big> tags in HTML",
-                "options": ["They work on anything", "They can be used for text only", "They can be repeated", "None of the above"],
-                "correct": "They can be repeated"
-            },
-            {
-                "Question": "What is the correct order to effectively apply CSS.",
-                "options": ["a:link, a:visited, a:hover, a:acitive", "a:acitive, a:hover, a:link, a:visited", "a:hover, a:visited, a:link, a:acitive", "a:visited, a:link, a:active, a:hover"],
-                "correct": "a:link, a:visited, a:hover, a:acitive"
-            }
-
-        ]
-}
-
-export { data1, data2, data3, data4, data5, data6 };
+export { data};

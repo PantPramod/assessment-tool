@@ -6,8 +6,8 @@ justify-content: space-between;
 display:flex ;
 flex-direction: row;
 align-items: center;
-/* justify-content: space-between; */
 flex-wrap: wrap;
+
 :last-child{
  margin-bottom   :40px ;
 }
@@ -20,7 +20,12 @@ text-align: center;
 overflow: hidden;
 margin-top: 40px;
 flex-basis: 33%;
-
+@media(max-width: 768px){
+    flex-basis: 50%;
+}
+@media(max-width: 550px){
+    flex-basis: 100%;
+}
 .data{
     cursor: pointer;
     background-color: white;
